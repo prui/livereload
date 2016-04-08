@@ -1,0 +1,10 @@
+{
+  "name": "livedload",
+  "dependencies": {
+    "express": "^4.13.4",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-livereload": "^3.8.1"
+  }
+}
