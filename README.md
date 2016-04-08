@@ -6,10 +6,13 @@ livereload
 * [gulp-livereload github] (https://github.com/vohof/gulp-livereload) `recommend`
 
 #Table of contents
+- [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Tip](#tip)
 
+##Demo
+![demo](https://github.com/jarden-liu/livereload/raw/master/pic/demo.gif)
 
 ##Installation
 ```bash
