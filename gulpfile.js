@@ -24,14 +24,24 @@ gulp.task('watch', function() {
 });
 
 
-app.get('/*.html',function (req,res) {
-  var html = fs.readFileSync('www'+req.path);
-  res.send(html.toString()+'<script src="http://127.0.0.1:35729/livereload.js"></script>');
+app.get('/*.html', function(req, res) {
+  fs.readFile('www' + req.path, function(err, html) {
+    if (err) {
+      res.end('No Found');
+      return;
+    }
+    res.send(html.toString() + '<script src="http://127.0.0.1:35729/livereload.js"></script>');
+  });
 });
 
-app.get('/',function (req,res) {
-  var html = fs.readFileSync('www/index.html');
-  res.send(html.toString()+'<script src="http://127.0.0.1:35729/livereload.js"></script>');
+app.get('/', function(req, res) {
+  fs.readFile('www/index.html', function(err, html) {
+    if (err) {
+      res.end('No Found');
+      return;
+    }
+    res.send(html.toString() + '<script src="http://127.0.0.1:35729/livereload.js"></script>');
+  });
 });
 
 
